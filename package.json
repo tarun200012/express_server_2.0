@@ -10,7 +10,6 @@
     "build-babel": "babel -d ./build ./index.js -s",
     "build": "npm run clean && npm run build-babel"
   },
-  
   "author": "Tarun",
   "license": "ISC",
   "dependencies": {
@@ -23,6 +22,7 @@
     "@babel/runtime": "^7.18.9",
     "body-parser": "^1.20.0",
     "express": "^4.18.1",
+    "mongoose": "^6.5.2",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.19"
   }
