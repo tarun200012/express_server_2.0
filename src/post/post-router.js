@@ -3,24 +3,15 @@ import controllers from './post-controller';
 
 const router=Router();
 
-router
-    .route('/')
+router.route("/")
+       .get(controllers.getMany)
+       .post(controllers.createOne);
+
+    router
+    .route('/:id')
     .get(controllers.getOne)
-    .post(controllers.createOne);
-
-    // router
-    // .route('/post/:id/:num')
-    // .get((req,res)=>{
-    //     res.send("okget");
-    // })
-    // .patch((req,res)=>{
-
-    //     res.send(req.body);
-    // })
-    // .delete((req,res)=>{
-
-    //     res.send(req.body);
-    // });
+    .patch(controllers.updateOne)
+    .delete(controllers.removeOne);
 
     export default router;
 
